@@ -1,0 +1,38 @@
+models.py:
+
+This file is where you define your Django models, which represent the database structure and data schema.
+Models are defined as Python classes that inherit from Django's models.Model class.
+You define fields, relationships, and behavior for your data using various field types provided by Django.
+
+views.py:
+
+In the views.py file, you define the views of your Django app.
+Views are functions or classes that handle HTTP requests and return HTTP responses.
+You can define different views for various URL patterns and encapsulate the logic to process requests, retrieve data from models, and render templates.
+
+urls.py:
+
+The urls.py file contains the URL routing configuration for your app.
+URL patterns map specific URLs to the corresponding views that handle those URLs.
+You define the URL patterns using Django's URL patterns syntax, specifying the URL patterns and associating them with the corresponding views.
+
+admin.py:
+
+Django's admin site is a built-in feature that provides a web-based interface for managing data in your app.
+In the admin.py file, you can register your models to make them accessible and editable through the admin interface.
+By registering your models, you enable CRUD (Create, Read, Update, Delete) operations on your app's data through the admin site.
+
+apps.py:
+
+The apps.py file contains the app configuration, including metadata and settings for your app.
+You can customize certain behaviors of your app by modifying this file, although the default generated content is usually sufficient for most apps.
+
+
+
+poetry - easier dependencies management 
+       - creates and manage virtual env
+
+celery with redis - offload time-consuming database tasks to separate workers
+		  - supports distributed task processing, can add more workers to handle workload
+		  - asynchronous processing
+		  - celery -A hnmproject.celery_app worker --loglevel=debug

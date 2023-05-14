@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Groups</title>
+</head>
+<body>
+    <h1>User Groups</h1>
+    <ul>
+    {% for group in user_groups %}
+        <li>{{ group.name }} - {{ group.description }}</li>
+    {% empty %}
+        <li>No user groups found.</li>
+    {% endfor %}
+    </ul>
+</body>
+</html>
