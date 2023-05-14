@@ -6,6 +6,7 @@ authors = ["Ilyas <92800413+ilyasnawawie@users.noreply.github.com>"]
 readme = "README.md"
 packages = [{include = "pyproject"}]
 
+
 [tool.poetry.dependencies]
 python = "^3.11"
 django-environ = "^0.10.0"

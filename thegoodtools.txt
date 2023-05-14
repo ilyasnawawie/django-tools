@@ -35,4 +35,16 @@ poetry - easier dependencies management
 celery with redis - offload time-consuming database tasks to separate workers
 		  - supports distributed task processing, can add more workers to handle workload
 		  - asynchronous processing
-		  - celery -A hnmproject.celery_app worker --loglevel=debug
+		  - celery -A hnmproject.celery_app worker --loglevel=info
+
+[tool.poetry.dependencies]
+python = "^3.11"
+django-environ = "^0.10.0"
+celery = "^5.2.7"
+pytest = "^7.3.1"
+sentry-sdk = "^1.22.2"
+black = "^23.3.0"
+django-storages = "^1.13.2"
+mysqlclient = "^2.1.1"
+redis = "^4.5.5"
+mysql-connector-python = "^8.0.26"

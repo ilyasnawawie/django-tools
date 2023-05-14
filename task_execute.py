@@ -2,7 +2,6 @@ from hnmproject.hnmapp.tasks import my_task
 import logging
 logging.basicConfig(level=logging.INFO)
 
-
 # Function to execute the task
 def execute_task():
     # Send the task to the Celery worker
