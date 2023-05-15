@@ -1,0 +1,29 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Start Redis",
+            "type": "shell",
+            "command": "cd .\\redis\\; .\\redis-server",
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always"
+            },
+            "runOptions": {
+                "runOn": "folderOpen"
+            }
+        },
+        {
+            "label": "Start Celery",
+            "type": "shell",
+            "command": "poetry run celery -A hnmproject.celery_app worker -n worker1 --loglevel=info",
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always"
+            },
+            "runOptions": {
+                "runOn": "folderOpen"
+            }
+        }
+    ]
+}

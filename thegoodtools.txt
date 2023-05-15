@@ -36,6 +36,19 @@ celery with redis - offload time-consuming database tasks to separate workers
 		  - supports distributed task processing, can add more workers to handle workload
 		  - asynchronous processing
 		  - celery -A hnmproject.celery_app worker --loglevel=info
+		  - easier to manage tasks and offload tasks
+		  - from hnmproject.hnmapp.tasks import my_task, my_task (to execute task)
+
+my_task()
+
+black - automatic formatte
+	  - can format whole directory (black .)
+	  - can view if file need changes (black --check)
+
+pytest - lets you test functions and code using a testing framework
+	   - can test files that have test_*.py or *_test.py
+	   - test function and methods by naming test_*()
+	   - run tests by pytest
 
 [tool.poetry.dependencies]
 python = "^3.11"
