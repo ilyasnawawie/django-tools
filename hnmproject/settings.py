@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'hnmproject.hnmapp',
+    'rest_framework'
 ]
 
 MIDDLEWARE = [
@@ -81,13 +82,14 @@ WSGI_APPLICATION = 'hnmproject.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': env('DB_NAME'),
+        'NAME': env('DB_DATABASE'),
         'HOST': env('DB_HOST'),
         'PORT': env('DB_PORT'),
         'USER': env('DB_USER'),
         'PASSWORD': env('DB_PASSWORD'),
     }
 }
+
 
 
 

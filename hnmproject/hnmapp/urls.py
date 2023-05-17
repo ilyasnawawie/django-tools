@@ -1,7 +1,10 @@
-from django.urls import path
-from hnmapp.views import user_groups_view
+from django.urls import path, include
+from rest_framework.routers import DefaultRouter
+from .views import AdminAuthTokenViewSet
+
+router = DefaultRouter()
+router.register(r'admin_auth_tokens', AdminAuthTokenViewSet)
 
 urlpatterns = [
-    # other URL patterns
-    path('user-groups/', user_groups_view, name='user_groups'),
+    path('', include(router.urls)),
 ]

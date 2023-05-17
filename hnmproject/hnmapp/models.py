@@ -1,8 +1,9 @@
 from django.db import models
 
-class UserGroups(models.Model):
-    name = models.CharField(max_length=200)
-    description = models.TextField()
+class AdminAuthToken(models.Model):
+    id = models.AutoField(primary_key=True)
+    user_id = models.IntegerField()
+    created_at = models.DateTimeField()
 
-    def __str__(self):
-        return self.name
+    class Meta:
+        db_table = 'admin_auth_tokens'
